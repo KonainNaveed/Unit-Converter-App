@@ -1,6 +1,5 @@
 import streamlit as st
 
-# Conversion logic
 def convert_length(value, from_unit, to_unit):
     factors = {
         "Meter": 1.0,
@@ -34,7 +33,7 @@ def convert_temperature(value, from_unit, to_unit):
     elif from_unit == "Kelvin":
         return (value - 273.15) if to_unit == "Celsius" else ((value - 273.15) * 9/5 + 32)
 
-# Streamlit UI
+
 st.title("🔁 Unit Converter App")
 
 category = st.selectbox("Select Category", ["Length", "Weight", "Temperature"])
